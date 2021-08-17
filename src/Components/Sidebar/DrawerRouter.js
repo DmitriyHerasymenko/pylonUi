@@ -12,6 +12,7 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import ListItemText from '@material-ui/core/ListItemText';
 import { useStyles } from './styles';
+import { RegisterUser } from "../RegisterUser";
 
 export const DrawerRoutes = ({ isOpen, setOpen }) => {
     const classes = useStyles();
@@ -46,7 +47,7 @@ export const DrawerRoutes = ({ isOpen, setOpen }) => {
                     <Link to='/users' style={{textDecoration:'none', color: '#fff'}}>
                         <ListItem button >
                             <ListItemIcon>{<InboxIcon style={{color: '#fff'}} />}</ListItemIcon>
-                            <ListItemText primary='Users' />
+                            <ListItemText primary='RegisterUser' />
                         </ListItem>
                     </Link>
                     <Link to='/clients' style={{textDecoration:'none', color: '#fff'}}>
@@ -60,7 +61,7 @@ export const DrawerRoutes = ({ isOpen, setOpen }) => {
             </Drawer>
             <main className={classes.content}>
                 <Switch>
-                    <Route path='/Users' render={() => <h1 style={{margin: "30% 0% 30% 0%"}}>Post</h1>} />
+                    <Route path='/Users' render={() => <RegisterUser />} />
                     <Route path='/Clients' render={() => <h1 style={{margin: "30% 0% 30% 0%"}}>Get</h1>} />
                 </Switch>
             </main>
