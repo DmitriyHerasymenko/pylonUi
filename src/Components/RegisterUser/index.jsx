@@ -60,13 +60,14 @@ export const RegisterUser = ({ loader }) => {
                     id="outlined-helperText"
                     label="Enter name"
                     variant="outlined"
+                    error={error}
                     onChange={handleName}
                 />
                 <Button
                     variant="contained" color="primary"
                     onClick={postRequest}
                     >
-                    Primary
+                    Create User
                 </Button>
                 <Snackbar open={openInfo[1]} autoHideDuration={3000} onClose={handleClose} anchorOrigin={{vertical: 'bottom', horizontal: 'center'}}>
                     <Alert onClose={handleClose} severity={openInfo[0]} >
