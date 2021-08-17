@@ -35,7 +35,7 @@ export const Header = ({isOpen, setOpen}) => {
                         <MenuIcon/>
                     </IconButton>
                     {isOpen ? <Typography variant="h6" noWrap>
-                        Test
+                        Pylon
                     </Typography> : <></>}
                 </Toolbar>
             </AppBar>
